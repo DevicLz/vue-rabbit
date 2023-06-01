@@ -4,4 +4,4 @@ export function getCategory(){
     return httpInstance({
         url:'home/category/head'
     })
-}
+} 
