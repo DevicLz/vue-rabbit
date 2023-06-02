@@ -1,7 +1,7 @@
 import httpInstance from "@/utils/http"
 
 export function getCategoryAPI(){
-    httpInstance({
+    return httpInstance({
         url:'/home/category/head'
     })
 }
