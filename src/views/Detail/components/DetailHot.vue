@@ -12,7 +12,7 @@ const props = defineProps({
     }
 })
 
-//适配title 1 - 24小时热榜  2 - 周热榜
+//适配title  1 - 24小时热榜  2 - 周热榜
 const TYPEMAP = {
     1:'24小时热榜',
     2:'周热榜'
