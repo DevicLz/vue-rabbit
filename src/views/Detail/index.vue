@@ -35,6 +35,7 @@ const addCart = () =>{
       id:goods.value.id, //商品id
       name:goods.value.name,  //商品名称
       picture:goods.value.mainPictures[0],  //图片
+      price:goods.value.price, //商品价格
       count:count.value,  //商品数量
       skuId:skuObj.skuId,  //skuId
       attrsText:skuObj.specsText,  //商品规格文本
