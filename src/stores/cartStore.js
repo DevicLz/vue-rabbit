@@ -12,6 +12,7 @@ export const useCartStore =  defineStore('cart',() => {
         const res = await findNewCartListAPI()
         cartList.value = res.result
     }
+
     //1.定义state - cartList
     const cartList = ref([])
     //2.定义action - addCart
@@ -51,6 +52,10 @@ export const useCartStore =  defineStore('cart',() => {
        }
     }
 
+    //清除购物车
+    const clearCart = () => {
+        cartList.value = []
+    }
 
     //单选功能
     const singleCheck = (skuId,selected) =>{
@@ -63,6 +68,7 @@ export const useCartStore =  defineStore('cart',() => {
     const allCheck = (selected) => {
         cartList.value.forEach(item => item.selected = selected)
     }
+
     //计算属性
     //1.总的数量 所有项的count之和
     const allCount = computed(()=> cartList.value.reduce((a,c) =>a + c.count,0))
@@ -86,7 +92,8 @@ export const useCartStore =  defineStore('cart',() => {
         isAll,
         allCheck,
         selectedCount,
-        selectedPrice
+        selectedPrice,
+        clearCart
     }
 },{
     persist:true,
